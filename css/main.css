@@ -822,4 +822,9 @@ footer {
   transition: 0.05s ease-out;
   pointer-events: none;
 }
+@media (pointer:none) {
+    .cattegories ul li{
+        transform-style: flat;
+    }
+  }
 /*# sourceMappingURL=main.css.map */
