@@ -232,11 +232,13 @@
     </script>
 
     <script>
-        new Glide('.glide',{
-            type: 'carousel',
-            autoplay:3000,
-            animationDuration:1000
-        }).mount()
+        if (matchMedia('(pointer:fine)').matches) {
+            new Glide('.glide', {
+                type: 'carousel',
+                autoplay: 3000,
+                animationDuration: 1000
+            }).mount()
+        }
     </script>
 
 </body>
