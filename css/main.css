@@ -811,20 +811,22 @@ footer {
   }
 }
 
-#cursor {
-  position: absolute;
-  width: 5px;
-  aspect-ratio: 1/1;
-  background-color: var(--main-white);
-  border-radius: 20px;
-  z-index: 200;
-  -webkit-transition: 0.05s ease-out;
-  transition: 0.05s ease-out;
-  pointer-events: none;
-}
+@media (pointer: fine) {
+    #cursor {
+        position: absolute;
+        width: 5px;
+        aspect-ratio: 1/1;
+        background-color: var(--main-white);
+        border-radius: 20px;
+        z-index: 200;
+        transition: 0.05s ease-out;
+        pointer-events: none;
+    }
+  }
 @media (pointer:none) {
     .cattegories ul li{
         transform-style: flat;
     }
   }
+
 /*# sourceMappingURL=main.css.map */
