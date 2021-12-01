@@ -266,26 +266,32 @@ main {
           box-shadow: 2px 2px 0px var(--main-blue);
   cursor: pointer;
   padding-top: 0.8em;
-  -webkit-transform-style: preserve-3d;
-          transform-style: preserve-3d;
-  -webkit-transform: perspective(1000px);
-          transform: perspective(1000px);
-}
-
-.cattegories ul li p {
-  -webkit-transform: translateZ(1.5rem);
-          transform: translateZ(1.5rem);
 }
 
 .cattegories ul li div {
-  -webkit-transform: translateZ(1.5rem);
-          transform: translateZ(1.5rem);
   height: 65%;
   width: 100%;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
   margin-bottom: 0.3em;
+}
+
+@media (pointer: fine) {
+  .cattegories ul li {
+    -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+    -webkit-transform: perspective(1000px);
+            transform: perspective(1000px);
+  }
+  .cattegories ul li p {
+    -webkit-transform: translateZ(1.5rem);
+            transform: translateZ(1.5rem);
+  }
+  .cattegories ul li div {
+    -webkit-transform: translateZ(1.5rem);
+            transform: translateZ(1.5rem);
+  }
 }
 
 .section-num {
@@ -370,6 +376,7 @@ main {
   -ms-grid-columns: (1fr)[3];
       grid-template-columns: repeat(3, 1fr);
   gap: 7rem 7rem;
+  overflow-x: hidden;
 }
 
 .uslugi-grid > div {
@@ -764,10 +771,10 @@ footer {
   .numbers div :nth-child(2) {
     font-size: 9.6rem;
   }
-  .glider-container {
+  .glide {
     margin-top: 5rem;
   }
-  .glider-container h2 {
+  .glide h2 {
     margin: 0 auto 1.5rem;
     font-size: 3.6rem;
   }
@@ -812,22 +819,16 @@ footer {
 }
 
 @media (pointer: fine) {
-    #cursor {
-        position: absolute;
-        width: 5px;
-        aspect-ratio: 1/1;
-        background-color: var(--main-white);
-        border-radius: 20px;
-        z-index: 200;
-        transition: 0.05s ease-out;
-        pointer-events: none;
-    }
+  #cursor {
+    position: absolute;
+    width: 5px;
+    aspect-ratio: 1/1;
+    background-color: var(--main-white);
+    border-radius: 20px;
+    z-index: 200;
+    -webkit-transition: 0.05s ease-out;
+    transition: 0.05s ease-out;
+    pointer-events: none;
   }
-@media (pointer:none) {
-    .cattegories ul li{
-        transform-style: flat;
-      transform: perspective(0);
-    }
-  }
-
+}
 /*# sourceMappingURL=main.css.map */
