@@ -222,23 +222,23 @@
     <script type="text/javascript" src="vanilla-tilt.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
     <script>
-        VanillaTilt.init(document.querySelectorAll(".vanilla-tilt"), {
-            "max-glare": .05,
-            glare: true,
-            reverse: true,
-            max: 5,
-            speed: 400
-        });
+        if (matchMedia('(pointer:fine)').matches) {
+            VanillaTilt.init(document.querySelectorAll(".vanilla-tilt"), {
+                "max-glare": .05,
+                glare: true,
+                reverse: true,
+                max: 5,
+                speed: 400
+            });
+        }
     </script>
 
     <script>
-        if (matchMedia('(pointer:fine)').matches) {
             new Glide('.glide', {
                 type: 'carousel',
                 autoplay: 3000,
                 animationDuration: 1000
             }).mount()
-        }
     </script>
 
 </body>
